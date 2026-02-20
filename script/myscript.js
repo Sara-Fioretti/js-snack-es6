@@ -3,8 +3,27 @@ Creare un array di oggetti:
 Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 Stampare a schermo la bici con peso minore.
 */
+let oggetti = [
+    { nome: "bici1", peso: 6 },
+    { nome: "bici2", peso: 6.5 },
+    { nome: "bici3", peso: 8 },
+    { nome: "bici4", peso: 7 },
+    { nome: "bici5", peso: 7.5 },
+    { nome: "bici6", peso: 8.5 },
+    { nome: "bici7", peso: 9 },
+    { nome: "bici8", peso: 6.8 },
+]
 
-
+function elementoMinore(array) {
+    let pesoMinore=array[0].peso
+    for (let i = 0; i < oggetti.length; i++) {
+        if (oggetti[i].peso < oggetti[0].peso) {
+            pesoMinore = oggetti[i].peso
+        }
+    }
+    return (pesoMinore)
+}
+console.log(elementoMinore(oggetti))
 
 /*Snack2
 Creare un array di oggetti di squadre di calcio.
