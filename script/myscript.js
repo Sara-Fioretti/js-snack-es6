@@ -16,9 +16,9 @@ let oggetti = [
 
 function elementoMinore(array) {
     let pesoMinore = array[0].peso
-    for (let i = 0; i < oggetti.length; i++) {
-        if (oggetti[i].peso < oggetti[0].peso) {
-            pesoMinore = oggetti[i].peso
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].peso < array[0].peso) {
+            pesoMinore = array[i].peso
         }
     }
     return (pesoMinore)
@@ -58,3 +58,8 @@ for (let i = 0; i < squadre.length; i++) {
     falliSquadre.push(squadre[i].falliSubiti)
 }
 console.log(falliSquadre)
+
+/*ALTERNATIVA*/
+let {nome, falliSubiti} = squadre
+let fallisquadre =  [nome, falliSubiti]
+console.log(fallisquadre)
